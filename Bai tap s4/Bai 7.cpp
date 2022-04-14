@@ -6,7 +6,7 @@ int main(){
 	
 	printf("nhap vao a va b va a>=2 a<b\n");
 	scanf("%d %d",&a,&b);
-	}while (a>=b&&a<2);
+	}while (a>=b||a<2);
 	
 	
 	for(int x=a; x<=b; x++){

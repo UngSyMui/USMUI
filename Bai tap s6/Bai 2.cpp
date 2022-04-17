@@ -1,6 +1,7 @@
 # include<stdio.h>
+# include<math.h>
 int main(){
-	int n;
+	int n,i,j,b;
 	printf("Nhap n = ");
 	scanf("%d",&n);
 	int a[n];
@@ -11,14 +12,19 @@ int main(){
 	int x;
 	printf("\n Nhap x = ");
 	scanf("%d",&x);
-	int min=x-a[0];	
+	int min=abs(x-a[0]);
+	b=a[0];	
 	for(int i=0; i<n;i++){
-		if(x-a[i]<min){
-			min=x-a[i];
-		}
 		
+		if(abs(x-a[i])<min){
+		b=a[i];
+		min=abs(x-a[i]);
+		
+				
+		}	
 	}
-	int b=x-min;
-	printf("\n Gia tri gan x nhat la %d", b );
 	
-}
+	
+	printf("Gia tri gan x nhat %d",b);
+	}
+	

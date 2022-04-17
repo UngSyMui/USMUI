@@ -1,6 +1,7 @@
 # include<stdio.h>
+# include<math.h>
 int main(){
-	int n;
+	int n,i,j,b;
 	printf("Nhap n = ");
 	scanf("%d",&n);
 	int a[n];
@@ -11,14 +12,23 @@ int main(){
 	int x;
 	printf("\n Nhap x = ");
 	scanf("%d",&x);
-	int max=x-a[0];	
+	int max=abs(x-a[0]);
+	b=a[0];	
 	for(int i=0; i<n;i++){
-		if(x-a[i]>max){
-			max=x-a[i];
-		}
 		
+		if(abs(x-a[i])>max){
+		b=a[i];
+		max=abs(x-a[i]);
+		
+				
+		}	
 	}
-	int b=x-max;
-	printf("\n Gia tri xa x nhat la %d", b );
 	
-}
+	
+	printf("Gia tri xa x nhat %d",b);
+	}
+	
+	
+	
+
+

@@ -15,26 +15,26 @@ int main(){
 			}
 		}
 	}
-	int min=a[0];
-	int max=a[0];
+	int a1 =a[0];
+	int b =a[0];
 	for(int i=0;i<n;i++){
-		if(a[i]>max){
-			max=a[i];
+		if(a[i]>a1){
+			a1=a[i];
 		}
-		if(a[i]<min){
-			min=a[i];
+		if(a[i]<b){
+			b=a[i];
 		}
 	}
-	if(min<0){
-		if(0-min>max){
+	int a2=a1<0?-a1:a1;
+	int b1=b<0?-b:b;
+	if(b1>a2){
+		printf("Doan can tim %d %d ", -b1, b1);
+	}else{
+		printf("Doan can tim %d %d ", -a2, a2);
+	}
+	
 		
-		printf("\n Doan [a,b] la [%d,%d]", min, (0-min));
-	} 
-	 else{
-		printf("\n Doan [a,b] la [%d,%d]", (0-max), max);
-	}}else{
-			printf("\n Doan [a,b] la [%d,%d]", (0-max), max);
-	}
+	
 	
 	
 	

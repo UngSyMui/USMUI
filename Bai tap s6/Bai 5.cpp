@@ -11,17 +11,21 @@ int main(){
 
 	}
 	for(int i=0;i<n;i++){
+	if (a[i]%2!=0){
 
-
-		for(int j=i+1;j<n-i;j++){
-			if(a[i]%2!=0&&a[j]%2!=0&&a[i]>a[j]){
-				int temp =a[i];
-				a[i]=a[j];
-				a[j]= temp;
+		for(int j=i+1;j<n;j++){
+			if(a[j]%2!=0&&a[i]>a[j]){
+				int temp =a[j];
+				a[j]=a[i];
+				a[i]= temp;
 			}
 
 		}
-		printf("%d	", a[i]);				
+						
+		}
+		}
+			for(int i=0;i<n;i++){
+				printf("%d ", a[i]);
 		}
 }
 		
